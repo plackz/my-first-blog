@@ -55,13 +55,6 @@ h1, h2, h3, h4 {
     color: #000000;
 }
 
-/*
-.btn-info,
-.btn-info:hover,
-.btn-info:focus,
-.btn-info:active,
-.btn-info.active
-.btn-info:active:focus {
-    background-color: orange;
+.top-menu.greeting {
+    color: white;
 }
-*/
