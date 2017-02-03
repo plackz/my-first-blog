@@ -1,0 +1,23 @@
+{% extends "admin/base.html" %}
+
+{% block title %}{{ title }} | OKC Quality{% endblock %}
+
+{% block extrastyle %}
+<style>
+#header{
+  background-color: #003366;
+  color: white;
+}
+
+#branding h1, #branding h1 a:link, #branding h1 a:visited {
+    color: white;
+}
+</style>
+
+{% endblock %}
+
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">OKC Quality site administration</a></h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
