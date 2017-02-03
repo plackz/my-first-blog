@@ -1,0 +1,2 @@
+TODO: add an actions app to the project. this will be the master action list
+TODO: add a scheduled tasks tracker app kinda like a standard work board
