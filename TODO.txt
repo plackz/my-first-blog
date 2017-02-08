@@ -1,2 +1,4 @@
 TODO: add an actions app to the project. this will be the master action list
 TODO: add a scheduled tasks tracker app kinda like a standard work board
+TODO: add a standard work task reminder Wekly, Daily, Monthly
+TODO: add a random audit check table. USe rand to select. date time stamp, selct only not done in the last year.
