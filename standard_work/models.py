@@ -24,3 +24,29 @@ class StandardWork(models.Model):
     class Meta:
         verbose_name = 'Standard work'
         verbose_name_plural = 'Standard work'
+
+class WorkGuidance(models.Model):
+    guide_title = models.ForeignKey(StandardWork)
+    guide_text = models.TextField()
+
+    def __str__(self):
+        return self.guide_text
+
+    class Meta:
+        verbose_name = 'Work guidance'
+        verbose_name_plural = 'Work guidance'
+
+
+class WorkRemarks(models.Model):
+    remark_title = models.ForeignKey(StandardWork)
+    # FIX: find a way to list the steps from the guidance table. 
+    remark_guide = models.ForeignKey(WorkGuidance)
+    remark_text = models.TextField()
+    remark_created = models.DateTimeField(default=timezone.now)
+
+    def __str__(self):
+        return self.remark_text
+
+    class Meta:
+        verbose_name = 'Records'
+        verbose_name_plural = 'Records'
