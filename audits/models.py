@@ -17,10 +17,11 @@ class AuditType(models.Model):
         ('API', 'API 6D, 6A, Q1, 607'),
         ('PED', 'EU 2014/68'),
         ('Cust', 'Customer specification'),
+        ('TBD', 'To be determined'),
     )
 
     type_title = models.CharField(max_length=50)
-    audit_type = models.CharField(max_length=4, choices=AUDIT_TYPES)
+    audit_type_fld = models.CharField('audit type', max_length=4, choices=AUDIT_TYPES)
     audit_regulation = models.CharField(max_length=4, choices=AUDIT_REG)
 
     def __str__(self):
@@ -29,12 +30,16 @@ class AuditType(models.Model):
 
 # TODO: finish audit sections table
 class AuditSections(models.Model):
-    audit_type_section = models.ForeignKey('AuditType')
+    audit_type = models.ForeignKey('AuditType')
     section_number = models.CharField(max_length=10)
     section_heading = models.CharField(max_length=50)
 
     def __str__(self):
         return self.section_heading
+
+    class Meta:
+        verbose_name = 'Audit section'
+        verbose_name_plural = 'Audit sections'
 
 
 
