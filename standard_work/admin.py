@@ -1,3 +1,7 @@
 from django.contrib import admin
+from .models import StandardWork
 
-# Register your models here.
+# to edit the columns visible in the admin view
+# class AuditTypeAdmin(admin.ModelAdmin):
+
+admin.site.register(StandardWork)
