@@ -41,6 +41,25 @@ class AuditSections(models.Model):
         verbose_name = 'Audit section'
         verbose_name_plural = 'Audit sections'
 
+class AuditQuestions(models.Model):
+    question_id = models.AutoField('question id', primary_key=True)
+    section_num = models.CharField('section no.', max_length=20)
+    subsection_num = models.CharField('sub-section no.', max_length=20)
+    section_text = models.CharField('section', max_length=200)
+    subsection_text = models.CharField('sub-section', max_length=200)
+    general_question = models.TextField()
+    audit_specific = models.TextField('audit specific question')
+    audit_guidance = models.TextField('audit guide')
+
+    def __str__(self):
+        return self.section_text
+
+    class Meta:
+        verbose_name = 'Audit Question'
+        verbose_name_plural = 'Audit Questions'
+
+
+
 
 
 '''
