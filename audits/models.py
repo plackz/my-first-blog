@@ -32,7 +32,7 @@ class AuditType(models.Model):
 class AuditSections(models.Model):
     audit_type = models.ForeignKey('AuditType')
     section_number = models.CharField(max_length=10)
-    section_heading = models.CharField(max_length=50)
+    section_heading = models.CharField(max_length=200)
 
     def __str__(self):
         return self.section_heading
