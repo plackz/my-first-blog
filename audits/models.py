@@ -44,12 +44,12 @@ class AuditSections(models.Model):
 class AuditQuestions(models.Model):
     question_id = models.AutoField('question id', primary_key=True)
     section_num = models.CharField('section no.', max_length=20)
-    subsection_num = models.CharField('sub-section no.', max_length=20)
+    subsection_num = models.CharField('sub-section no.', max_length=20, blank=True)
     section_text = models.CharField('section', max_length=200)
-    subsection_text = models.CharField('sub-section', max_length=200)
-    general_question = models.TextField()
-    audit_specific = models.TextField('audit specific question')
-    audit_guidance = models.TextField('audit guide')
+    subsection_text = models.CharField('sub-section', max_length=200, blank=True)
+    general_question = models.TextField(blank=True)
+    audit_specific = models.TextField('audit specific question', blank=True)
+    audit_guidance = models.TextField('audit guide', blank=True)
 
     def __str__(self):
         return self.section_text
