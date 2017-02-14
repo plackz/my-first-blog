@@ -4,9 +4,11 @@ TODO: add a standard work task reminder Wekly, Daily, Monthly
 TODO: add a random audit check table. Use rand to select. date time stamp, selct only not done in the last year.
 TODO: create a data entry app
 TODO: create a start page for the blog app
+TODO: change the base navigation to be the same as the index.html
 
 DOING
 TODO: add a scheduled tasks tracker app kinda like a standard work board
-TODO: create a home page with clickable "apps" to go to the various areas
+
 
 DONE
+DONE: create a home page with clickable "apps" to go to the various areas
