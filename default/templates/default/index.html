@@ -1,17 +1,113 @@
-{% extends 'default/base.html' %}
+{% load staticfiles %}
+<html>
+	<head>
+		<title>Phantom by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="{% static 'assets/js/ie/html5shiv.js' %}"></script><![endif]-->
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="{% static 'assets/css/ie9.css' %}" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="{% static 'assets/css/ie8.css' %}" /><![endif]-->
+		<link rel="stylesheet" href="{% static 'assets/css/custom.css' %}" />
+	</head>
+	<body>
+		<!-- Wrapper -->
+			<div id="wrapper">
 
-{% block content %}
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
 
-<h1>Links to OKC QMS apps</h1>
-<ul>
-  <li><a href="{% url 'index' %}">Home</a></li>
-  <li><a href="{% url 'post_list' %}">Blog</a></li>
-  <li><a href="#">Standard Work</a></li>
-  <li><a href="#">Audit Management</a></li>
+							<!-- Logo
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="{% static 'images/logo.svg' %}" alt="" /></span><span class="title">Phantom</span>
+								</a>
+							-->
 
-<!--  <li><a href="#">Standard Work</a></li>
-  <li><a href="#">Standard Work</a></li>
--->
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
 
-</ul>
-{% endblock %}
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="/admin/audits/">Audit Management System</a></li>
+							<li><a href="generic.html">Tempus etiam</a></li>
+							<li><a href="generic.html">Consequat dolor</a></li>
+							<li><a href="elements.html">Elements</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<header>
+								<h1>OKC Quality Management App</h1>
+							</header>
+							<section class="tiles">
+								<article class="style1">
+									<span class="image">
+										<img src="{% static 'images/pic01.jpg' %}" alt="" />
+									</span>
+									<a href="/admin/audits/">
+										<h2>Audit Management System</h2>
+										<div class="content">
+											<p>App that helps to manage internal audits. The app also tracks open findings.</p>
+										</div>
+									</a>
+								</article>
+								<article class="style2">
+									<span class="image">
+										<img src="{% static 'images/pic02.jpg' %}" alt="" />
+									</span>
+									<a href="/admin/standard_work/">
+										<h2>Standard Work</h2>
+										<div class="content">
+											<p>App that manages standard work for the quality department.</p>
+										</div>
+									</a>
+								</article>
+								<article class="style3">
+									<span class="image">
+										<img src="{% static 'images/pic03.jpg' %}" alt="" />
+									</span>
+									<a href="#">
+										<h2>App 3</h2>
+										<div class="content">
+											<p>App 3 description</p>
+										</div>
+									</a>
+								</article>
+								<article class="style4">
+									<span class="image">
+										<img src="{% static 'images/pic04.jpg' %}" alt="" />
+									</span>
+									<a href="#">
+										<h2>App 4</h2>
+										<div class="content">
+											<p>App 4 description.</p>
+										</div>
+									</a>
+								</article>
+							</section>
+						</div>
+					</div>
+			</div>
+
+		<!-- Scripts -->
+			<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+			<script src="{% static 'assets/js/skel.min.js' %}"></script>
+			<script src="{% static 'assets/js/util.js' %}"></script>
+			<!--[if lte IE 8]><script src="{% static 'assets/js/ie/respond.min.js' %}"></script><![endif]-->
+			<script src="{% static 'assets/js/main.js' %}"></script>
+
+	</body>
+</html>
