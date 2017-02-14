@@ -13,7 +13,7 @@ class AuditSectionsAdmin(admin.ModelAdmin):
 
 @admin.register(AuditQuestions)
 class AuditQuestionsAdmin(admin.ModelAdmin):
-    search_fields = ['section_num', 'subsection_numr', 'section_text', 'subsection_text', 'general_question', 'audit_specific', 'audit_guidance' ]
+    search_fields = ['section_num', 'subsection_num', 'section_text', 'subsection_text', 'general_question', 'audit_specific', 'audit_guidance' ]
     list_display = ('section_num', 'subsection_num', 'section_text', 'subsection_text', 'general_question', 'audit_specific', 'audit_guidance')
     list_filter = ['section_num','section_text','subsection_text']
     fieldsets = [
