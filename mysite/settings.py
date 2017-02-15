@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'blog',
     'audits',
     'standard_work',
+    'incidents',
 ]
 
 MIDDLEWARE = [
