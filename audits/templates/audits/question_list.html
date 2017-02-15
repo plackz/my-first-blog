@@ -1,0 +1,15 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+  {% for question in questions %}
+    <div>
+      <p>Section: {{ question.section_num }} <strong><a href="">{{ question.section_text }}</a></strong></p>
+      <p>Subsection: {{ question.subsection_num }}</p>
+      <p><strong>{{ question.subsection_text }}</strong></p>
+      <p>{{ question.general_question }}</p>
+      <p>{{ question.audit_specific }}</p>
+      <p>{{ question.audit_guidance }}</p>
+
+    </div>
+  {% endfor %}
+{% endblock %}

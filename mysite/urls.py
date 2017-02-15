@@ -23,6 +23,7 @@ urlpatterns = [
     url(r'^accounts/logout/$', views.logout, name='logout', kwargs={'next_page': '/'}),
     url(r'', include('default.urls')),
     url(r'', include('blog.urls')),
+    url(r'', include('audits.urls')),
     #url(r'', include('standard_work.urls')),
     #url(r'', include('audits.urls')),
 ]
