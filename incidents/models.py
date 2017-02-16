@@ -12,7 +12,7 @@ class Incidents(models.Model):
     resolution_dt = models.DateTimeField('completed date', blank=True, null=True)
     root_cause = models.TextField()
     steps_to_fix = models.TextField()
-    resolved_time = models.IntegerField('duration (in seconds)')
+    resolved_time = models.IntegerField('duration (in minutes)')
     created_date = models.DateTimeField(default=timezone.now)
 
     def __str__(self):

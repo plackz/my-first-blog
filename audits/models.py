@@ -58,6 +58,28 @@ class AuditQuestions(models.Model):
         verbose_name = 'Audit Question'
         verbose_name_plural = 'Audit Questions'
 
+class AuditComments(models.Model):
+    FINDING_TYPE = (
+        ('Y', 'Yes'),
+        ('N', 'No'),
+        ('O', 'Obs'),
+    )
+
+    question_num = models.ForeignKey('audits.AuditQuestions', related_name='comments')
+    auditor_name = models.CharField(max_length=200)
+    finding = models.CharField(max_length=1, choices=FINDING_TYPE)
+    comment_title = models.CharField(max_length=200)
+    comment_text = models.TextField()
+    sap_ref = models.CharField('SAP REF', max_length=20)
+
+    def __str__(self):
+        return self.comment_title
+
+    class Meta:
+        verbose_name = 'Audit Comments'
+        verbose_name_plural = 'Audit Comments'
+
+# TODO: need to create auditor improvement suggestions table
 
 
 
