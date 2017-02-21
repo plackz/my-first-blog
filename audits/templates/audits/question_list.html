@@ -1,15 +1,26 @@
-{% extends 'blog/base.html' %}
+{% extends 'default/base.html' %}
 
 {% block content %}
-  {% for question in questions %}
-    <div>
-      <p>Section: {{ question.section_num }} <strong><a href="">{{ question.section_text }}</a></strong></p>
-      <p>Subsection: {{ question.subsection_num }}</p>
-      <p><strong>{{ question.subsection_text }}</strong></p>
-      <p>{{ question.general_question }}</p>
-      <p>{{ question.audit_specific }}</p>
-      <p>{{ question.audit_guidance }}</p>
-
-    </div>
-  {% endfor %}
+<div class="table-responsive">
+  <table style="width:100%" class="table table-striped">
+    <tr>
+      <th>Section</th>
+      <th>Subsection</th>
+      <th>General Question</th>
+      <th>Audit Specific Question</th>
+      <th>Audit Guidance</th>
+      <th style="width:200px">Notes</th>
+    </tr>
+    {% for question in questions %}
+      <tr>
+        <td>{{ question.section_num }} {{ question.section_text }}</td>
+        <td>{{ question.subsection_num }} {{ question.subsection_text }}</td>
+        <td>{{ question.general_question }}</td>
+        <td>{{ question.audit_specific }}</td>
+        <td>{{ question.audit_guidance }}</td>
+        <td> </td>
+      </tr>
+    {% endfor %}
+  </table>
+</div>
 {% endblock %}
