@@ -52,7 +52,7 @@ class AuditQuestions(models.Model):
     audit_guidance = models.TextField('audit guide', blank=True)
 
     def __str__(self):
-        return self.section_text
+        return str(self.question_id) + " / " + str(self.subsection_num)
 
     class Meta:
         verbose_name = 'Audit Question'
@@ -65,8 +65,8 @@ class AuditComments(models.Model):
         ('O', 'Obs'),
     )
 
-# TODO: need to find a way to force the foreignKey to be subsection number.
-    question_num = models.ForeignKey('AuditQuestions', to_field='question_id')
+# DONE: need to find a way to force the foreignKey to be subsection number.
+    question_num = models.ForeignKey('AuditQuestions')
     auditor_name = models.CharField(max_length=200)
     finding = models.CharField(max_length=1, choices=FINDING_TYPE)
     comment_title = models.CharField(max_length=200)
