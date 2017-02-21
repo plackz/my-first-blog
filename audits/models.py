@@ -65,6 +65,7 @@ class AuditComments(models.Model):
         ('O', 'Obs'),
     )
 
+# TODO: need to find a way to force the foreignKey to be subsection number.
     question_num = models.ForeignKey('AuditQuestions', to_field='question_id')
     auditor_name = models.CharField(max_length=200)
     finding = models.CharField(max_length=1, choices=FINDING_TYPE)
