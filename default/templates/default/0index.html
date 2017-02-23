@@ -1,71 +1,16 @@
-{% extends 'default/base.html' %}
 {% load staticfiles %}
-
-{% block content %}
-<div class="jumbotron">
-  <div class="container text-center">
-    <h1>Quality Management Apps</h1>
-    <p>Some text...</p>
-  </div>
-</div>
-
-<style>
-body {
-	background-color: white;
-}
-
-.main {
-	background-color: white;
-	margin: 2em 2em 2em 2em;
-}
-
-</style>
-<div class="main">
-	<!-- FIX: need to add padding -->
-	<div class="row">
-		<div class="col-sm-4">
-			<a href="/admin/audits/" class="btn btn-lg btn-primary btn-block" role="button">Audit Management System</a>
-			<p></p>
-			<p>App that helps to manage internal audits. The app also tracks open findings.</p>
-		</div>
-		<div class="col-sm-4">
-			<a href="/admin/standard_work/" class="btn btn-lg btn-success btn-block" role="button">Standard Work</a>
-			<p></p>
-			<p>App that manages standard work for the quality department.</p>
-		</div>
-		<div class="col-sm-4">
-			<a href="/admin/incidents/incidents/" class="btn btn-lg btn-danger btn-block" role="button">Incidents</a>
-			<p></p>
-			<p>System to record quality incidents</p>
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="col-sm-4">
-			<a href="/" class="btn btn-lg btn-warning btn-block" role="button">App 4</a>
-			<p></p>
-			<p>App that helps to ...</p>
-		</div>
-		<div class="col-sm-4">
-			<a href="/" class="btn btn-lg btn-info btn-block" role="button">App 5</a>
-			<p></p>
-			<p>App that helps to ...</p>
-		</div>
-		<div class="col-sm-4">
-			<a href="/" class="btn btn-lg btn-primary btn-block" role="button">App 6</a>
-			<p></p>
-			<p>App that helps to ...</p>
-		</div>
-	</div>
-</div>
-
-{% endblock %}
-
-
-
-<!--
-
-<!--
+<html>
+	<head>
+		<title>OKC Quality Management System</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="{% static 'assets/js/ie/html5shiv.js' %}"></script><![endif]-->
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="{% static 'assets/css/ie9.css' %}" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="{% static 'assets/css/ie8.css' %}" /><![endif]-->
+		<link rel="stylesheet" href="{% static 'assets/css/custom.css' %}" />
+	</head>
+	<body>
 		<!-- Wrapper -->
 			<div id="wrapper">
 
@@ -144,10 +89,30 @@ body {
 										</div>
 									</a>
 								</article>
+								<!--
+								<article class="style4">
+									<span class="image">
+										<img src="{% static 'images/pic04.jpg' %}" alt="" />
+									</span>
+									<a href="#">
+										<h2>App 4</h2>
+										<div class="content">
+											<p>App 4 description.</p>
+										</div>
+									</a>
+								</article>
+							-->
 							</section>
 						</div>
 					</div>
 			</div>
---> -->
+
+		<!-- Scripts -->
+			<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+			<script src="{% static 'assets/js/skel.min.js' %}"></script>
+			<script src="{% static 'assets/js/util.js' %}"></script>
+			<!--[if lte IE 8]><script src="{% static 'assets/js/ie/respond.min.js' %}"></script><![endif]-->
+			<script src="{% static 'assets/js/main.js' %}"></script>
+
 	</body>
 </html>

@@ -1,0 +1,11 @@
+/* Custom changes to template */
+/* change background-color to gray */
+body {
+  /*background-color: #d3d3d3; */
+
+  margin: 10px 10px 10px 10px;
+}
+
+table {
+  /*background-color: gray;*/
+}
